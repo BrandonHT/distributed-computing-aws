@@ -12,3 +12,14 @@ mkdir ../clean
 # en cada archivo, filtra los renglones que pertenezcan a registros de la categoria APARATOS ELECTRICOS
 for file in *.csv; do grep -i "APARATOS ELECTRONICOS" "$file" > ../clean/"$file"; done
 
+# solo cambia `../clean/` por la ruta donde esten tus datos 
+for file in ../clean/*.csv; do
+  iconv -f utf8 -t ascii//TRANSLIT "$file" > "$file.temp"
+  mv "$file.temp" "$file"
+done
+
+
+
+
+
+
