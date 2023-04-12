@@ -7,7 +7,7 @@ mkdir ../clean
 # Crea archivo donde escribiremos los datos
 touch ../clean/electronics_2021.csv
 # VARIABLE
-PATH_DATACLEAN=$(../clean/electronics_2021)
+PATH_DATACLEAN=$(../clean/electronics_2021.csv)
 
 # --------------- PASO 1: une todos los csv en uno solo
 tail -n+1 -q *.csv >> $PATH_DATACLEAN
