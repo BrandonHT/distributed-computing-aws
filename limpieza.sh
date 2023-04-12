@@ -21,7 +21,7 @@ csvformat -D '|' $PATH_DATACLEAN > tmp && mv tmp "$PATH_DATACLEAN"
 # ----------------- PASO 3.2: Cambiar formato de coficiacion utf8 a ASCII
 
 grep -i "APARATOS ELECTRONICOS" $PATH_DATACLEAN > $PATH_DATACLEAN < iconv -f utf8 -t ascii//TRANSLIT > "$PATH_DATACLEAN.temp"
-mv "$file.temp" "$file"
+mv "$PATH_DATACLEAN.temp" "$PATH_DATACLEAN"
 
 
 
