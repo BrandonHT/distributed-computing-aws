@@ -18,6 +18,8 @@ for file in ../clean/*.csv; do
   mv "$file.temp" "$file"
 done
 
+# une todos los csv en uno solo
+tail -n+1 -q ../clean/*.csv>> electronics_2021.csv
 
 
 
